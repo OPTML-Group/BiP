@@ -1,0 +1,45 @@
+# ->->->->-> Primary <-<-<-<-<-
+arch: "resnet20s"
+result_dir: "./trained_models"
+exp_name: "CIFAR100_resnet20s_Unstructured_BiP_K0.1"
+exp_mode: "prune"
+normalize: True
+scaled_score_init: True
+
+k: 0.1
+
+# ->->->->-> Train <-<-<-<-<-
+trainer: "bilevel"
+layer_type: "unstructured"
+epochs: 100
+optimizer: "sgd"
+lr: 0.1
+lr_schedule: "cosine"
+wd: 0.0001
+momentum: 0.9
+#warmup
+warmup_epochs: 0
+warmup_lr: 0.1
+
+
+# ->->->->-> Eval <-<-<-<-<-
+val_method: base
+
+
+# ->->->->-> Dataset <-<-<-<-<-
+dataset: CIFAR100
+batch_size: 128
+test_batch_size: 128
+num_classes: 100
+image_dim: 32
+data_dir: "./data"
+
+
+# ->->->->-> Misc <-<-<-<-<-
+seed: 1234
+print_freq: 100
+
+# ->->->->-> Bi-level <-<-<-<-<-
+lr2: 0.0001
+mask_lr_schedule: step
+mask_lr: 0.1
