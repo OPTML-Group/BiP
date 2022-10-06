@@ -20,7 +20,6 @@ from utils.general_utils import (
     clone_results_to_latest_subdir,
     setup_seed
 )
-from utils.model import extract_mask_as_tensor, calculate_IOU
 from utils.model import (
     get_layers,
     prepare_model,
@@ -162,9 +161,6 @@ def main():
         if args.evaluate:
             return
 
-    iou_res = []
-    last_mask = extract_mask_as_tensor(model, args.k)
-
     # Start training
     for epoch in range(start_epoch, args.epochs + args.warmup_epochs):
         start = time.time()
@@ -184,13 +180,6 @@ def main():
             epoch,
             args,
         )
-
-        current_mask = extract_mask_as_tensor(model, args.k)
-        cur_iou = calculate_IOU(last_mask, current_mask)
-        iou_res.append(cur_iou)
-        last_mask = current_mask
-
-        logger.info(f"Current IoU: {cur_iou}")
 
         # evaluate on test set
         if args.val_method == "smooth":
