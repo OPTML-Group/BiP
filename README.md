@@ -33,7 +33,7 @@ We will use `train.py` for all our experiments. The key arguments and their usag
   This argument specifies the configuration file you would like to use, which contains the argument settings that are shared across experiments and may save you time checking your command line. You can also create your own configuration file in the yaml format. We provide different configuration files in the folder `configs` for different datasets and training modes.
 - `--exp-mode` `pretrain | prune | finetune` 
   This argument specifies the training mode. You should follow the order pretrain-prune-finetune to process your model. Note, that for BiP, finetune is not necessary as we claimed in the paper. However, for extreme sparse case (e.g., remaining ratio < 1%), finetuning is still highly recommended.
-- `--trainer` `base (HYDRA) | bilevel (BiP) | bilevel_finetune(BiP finetuning)` 
+- `--trainer` `base (HYDRA) | bilevel (BiP)` 
 - `--dataset` `CIFAR10 | CIFAR100 | TinyImageNet | ImageNet` Please see below for more detailed dataset preparation for TinyImageNet and ImageNet.
 - `--k` 
   The fraction of the __remaining__ ratio. For unstructured pruning, we refer to the ratio of the remaining weights over the total model weights. For structured pruning, we refer to the ratio of the remaining filters/channels in each layer and we keep the remaining ratio the same for different layers.
