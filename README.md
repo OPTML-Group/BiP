@@ -2,7 +2,7 @@
 
 Repository with code to reproduce the results for compressed networks in [our paper on the bi-level optimization-based pruning algorithm](https://openreview.net/pdf?id=t6O08FxvtBY). 
 
-You can find the video of this paper [here](https://youtu.be/8vpxBYqlqLw).
+You can find the video of this paper [here](https://youtu.be/eeKITiOOTaE).
 
 In this work, we pursue the algorithmic advancement of model pruning. Specifically, we formulate the pruning problem from a fresh and novel viewpoint, bi-level optimization (BLO). We show that the BLO interpretation provides a technically-grounded optimization base for an efficient implementation of the pruning-retraining learning paradigm used in IMP. We also show that the proposed bi-level optimization-oriented pruning method (termed BIP) is a special class of BLO problems with a bi-linear problem structure. By leveraging such bi-linearity, we theoretically show that BIP can be solved as easily as first-order optimization, thus inheriting the computation efficiency. The algorithm pipeline is shown in the figure below.
 
