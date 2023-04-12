@@ -108,7 +108,7 @@ For unstructured pruning, we strictly follow the ones adopted by the state of th
 k = 0.8000 0.6400 0.5120 0.4100 0.3280 0.2620 0.2097 0.1678 0.1342 0.1074 0.0859 0.0687 0.0550 0.0440 0.0350 0.0280 0.0225 0.0180 0.0144 0.0115 0.0092
 ```
 
-Please do not be misled by this sparsity series. For each sparse ratio alone, the BiP prunes from dense model directly to the target sparsity ratio, rather than pruning based on the last checkpoint iteratively. 
+Please do not be mislead by this sparsity series. For each sparse ratio alone, the BiP prunes from dense model directly to the target sparsity ratio, rather than pruning based on the last checkpoint iteratively. 
 
 For structured pruning, we follow the linear sparsity ratio series (Figure 4, A6, and A7):
 

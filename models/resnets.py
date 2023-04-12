@@ -4,7 +4,7 @@ The implementation and structure of this file is hugely influenced by [2]
 which is implemented for ImageNet and doesn't have option A for identity.
 Moreover, most of the implementations on the web is copy-paste from
 torchvision's resnet and has wrong number of params.
-Proper ResNet-s for CIFAR10 (for fair comparision and etc.) has following
+Proper ResNet-s for CIFAR10 (for fair comparison and etc.) has following
 number of layers and parameters:
 name      | layers | params
 ResNet20  |    20  | 0.27M
