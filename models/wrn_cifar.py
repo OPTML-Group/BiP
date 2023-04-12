@@ -162,7 +162,7 @@ class WideResNet(nn.Module):
         return self.fc(out)
 
 
-# NOTE: Only supporting default (kaiming_init) initializaition.
+# NOTE: Only supporting default (kaiming_init) initialization.
 def wrn_28_10(conv_layer, linear_layer, **kwargs):
     return WideResNet(conv_layer, linear_layer, depth=28, widen_factor=10, **kwargs)
 
