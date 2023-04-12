@@ -8,7 +8,7 @@ class Flatten(nn.Module):
         return input.view(input.size(0), -1)
 
 
-# lin_i: i layer linear feedforard network.
+# lin_i: i layer linear feedforward network.
 def lin_1(input_dim=3072, num_classes=10):
     model = nn.Sequential(nn.Flatten(), nn.Linear(input_dim, num_classes))
     return model
