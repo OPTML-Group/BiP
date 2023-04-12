@@ -51,7 +51,7 @@ def parse_args():
         "--scaled-score-init",
         action="store_true",
         default=False,
-        help="Init importance scores proportaional to weights (default kaiming init)",
+        help="Init importance scores proportional to weights (default kaiming init)",
     )
 
     parser.add_argument(
