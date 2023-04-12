@@ -214,7 +214,7 @@ class ResNet(nn.Module):
         return self._forward_impl(x)
 
 
-# NOTE: Only supporting default (kaiming_init) initializaition.
+# NOTE: Only supporting default (kaiming_init) initialization.
 def ResNet18(conv_layer, linear_layer, **kwargs):
     return ResNet(conv_layer, linear_layer, BasicBlock, [2, 2, 2, 2], **kwargs)
 
